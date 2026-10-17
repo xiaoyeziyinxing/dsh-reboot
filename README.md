@@ -1,6 +1,8 @@
-# dsh-restart
+# dsh-reboot
 
 DeepSeek Harness（DeepSeek CLI / 桌面客户端）一键重启插件：改完插件或配置后，不用再手动关掉重开客户端。
+
+> npm 包名为 `dsh-reboot`（`dsh-restart` 名字在 npm 上已被占用）。
 
 ## 功能
 
@@ -20,7 +22,7 @@ DeepSeek Harness（DeepSeek CLI / 桌面客户端）一键重启插件：改完�
 ```yaml
 - insert:
     - id: restart
-      name: dsh-restart
+      name: dsh-reboot
       config:
         delayMs: 800    # 触发后延迟退出毫秒数（让响应先送达浏览器）
         respawn: true   # CLI 宿主退出后是否自动重启（桌面端始终交给 Electron）
@@ -29,7 +31,7 @@ DeepSeek Harness（DeepSeek CLI / 桌面客户端）一键重启插件：改完�
 ## 安装
 
 ```bash
-dsh plugin add dsh-restart          # npm
+dsh plugin add dsh-reboot           # npm
 dsh plugin add <本地目录>            # 本地开发
 ```
 

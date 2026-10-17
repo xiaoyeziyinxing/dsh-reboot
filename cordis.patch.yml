@@ -1,5 +1,5 @@
 - insert:
     - id: restart
-      name: dsh-restart
+      name: dsh-reboot
       config:
         delayMs: 800

@@ -1,5 +1,5 @@
 {
-  "name": "dsh-restart",
+  "name": "dsh-reboot",
   "version": "0.2.2",
   "type": "module",
   "main": "lib/index.js",
