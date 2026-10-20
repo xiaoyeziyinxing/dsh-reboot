@@ -263,7 +263,8 @@ export function apply(ctx: HostCtx, config: RestartConfig = {}): void {
   }
   try {
     if (typeof ctx.inject === 'function') {
-      ctx.inject(['webServer', 'webRuntime'], mountUiApi)
+      // 只注入 webServer：webRuntime 不是可注入服务，一并声明会让回调永久 pending，/restart/api 永远挂不上
+        ctx.inject(['webServer'], mountUiApi)
     } else {
       mountUiApi(ctx)  // 旧运行时无 ctx.inject：直接尝试，缺席则记日志跳过
     }

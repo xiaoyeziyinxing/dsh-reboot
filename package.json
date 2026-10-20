@@ -1,10 +1,10 @@
 {
   "name": "dsh-reboot",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "description": "DeepSeek Harness 一键重启插件：restart_host 工具 + 对话框重启按钮；CLI 宿主看门狗按原命令行原端口重启（页面自动恢复），桌面端自动重启整个客户端（TypeScript + vitest）",
+  "description": "DeepSeek Harness 一键重启插件：restart_host 工具 + 设置页「重启」入口；CLI 宿主看门狗按原命令行原端口重启（页面自动恢复），桌面端自动重启整个客户端（TypeScript + vitest）",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
@@ -14,7 +14,7 @@
   "author": "xiaoyeziyinxing",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaoyeziyinxing/dsh-restart.git"
+    "url": "https://github.com/xiaoyeziyinxing/dsh-reboot.git"
   },
   "keywords": [
     "deepseek-harness",
@@ -33,7 +33,9 @@
     "./client/api": "./lib/client.js"
   },
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "inject": [],
       "platform": "web",
@@ -48,5 +50,9 @@
     "@types/node": "^24.0.0",
     "typescript": "^5.5.0",
     "vitest": "^3.0.0"
+  },
+  "homepage": "https://github.com/xiaoyeziyinxing/dsh-reboot",
+  "bugs": {
+    "url": "https://github.com/xiaoyeziyinxing/dsh-reboot/issues"
   }
 }

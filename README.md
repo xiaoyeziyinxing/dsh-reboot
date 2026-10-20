@@ -7,7 +7,7 @@ DeepSeek Harness（DeepSeek CLI / 桌面客户端）一键重启插件：改完�
 ## 功能
 
 - **`restart_host` 工具**：对话里让 AI 重启宿主（"帮我重启加载新插件"）。调用前强制走 approval 确认（approval 缺席时拒绝，fail-closed）。
-- **对话框「重启」按钮**：输入区工具行一键重启，点击即确认。
+- **设置页「重启」入口**（v0.3.0）：设置弹窗左侧导航底部新增「重启」页，点击按钮即确认（原输入框工具行按钮已迁走）。
 - **`/restart/api` HTTP 路由**：`POST trigger {confirm:true}` / `POST status`，带浏览器信任围栏。
 
 ## 各端行为
